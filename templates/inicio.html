@@ -9,7 +9,12 @@
         <h2>Biblioteca</h2>
         <ul>
             {% for elem in libros %}
-                <li><a href="/libro/{{elem.isbn}}">{{elem.title}}</a></li>
+                {% if elem.isbn %}
+                    <li><a href="/libro/{{elem.isbn}}">{{elem.title}}</a></li>
+                {% else %}
+                    <li><a href="/">{{elem.title}} (No tiene ISBN)</a></li>
+                {% endif %}
+                    <br>
             {% endfor %}
         </ul>
     </body>
