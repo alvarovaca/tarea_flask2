@@ -14,7 +14,7 @@ def inicio():
 def libro(isbn):
     for i in datos:
         if "isbn" in i.keys() and isbn == i["isbn"]:
-            return render_template("libro.html",libro=i)
+            retur render_template("libro.html",libro=i)
     abort(404)
 
 @app.route('/categoria/<categoria>')
