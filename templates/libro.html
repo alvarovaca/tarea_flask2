@@ -18,7 +18,7 @@
         {% endif %}
         {% if libro.authors %}
             <p><strong>Autores:</strong></p>
-            {% for elem in libro["authors"] %}
+            {% for elem in libro.authors %}
                 <ul>
                     <li><p>{{elem}}</p></li>
                 </ul>
@@ -26,7 +26,7 @@
         {% endif %}
         {% if libro.categories %}
             <p><strong>Categorias:</strong></p>
-            {% for elem in libro["categories"] %}
+            {% for elem in libro.categories %}
                 <ul>
                     <li><a href="/categoria/{{elem}}">{{elem}}</a></li>
                 </ul>
