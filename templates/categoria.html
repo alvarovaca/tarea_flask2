@@ -12,11 +12,12 @@
                     {% if elem.isbn %}
                         <li><a href="/libro/{{elem.isbn}}">{{elem.title}}</a></li>
                     {% else %}
-                        <li><a href="/">{{elem.title}} (No tiene ISBN)</a></li>
+                        <li><a href="/categoria/{{categoria}}">{{elem.title}} (No tiene ISBN)</a></li>
                     {% endif %}
                     <br>
                 {% endif %}
             {% endfor %}
         </ul>
+        <a href="/">Inicio</a>
     </body>
 </html>
